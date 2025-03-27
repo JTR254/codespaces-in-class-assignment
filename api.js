@@ -4,7 +4,7 @@ export function getPosts() {
     return fetch (BASE_URL)
     .then (response => {
         if (!response.ok) {
-            throw now Error (`HTTP error: ${response.status}`);
+            throw new Error (`HTTP error: ${response.status}`);
         }
         return response.json();
     })
